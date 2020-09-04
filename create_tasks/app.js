@@ -92,7 +92,7 @@ function removeTaskFromStorage(taskItem){
       tasks.splice(i, 1);
     }
   })
-  localStorage.setItem('tasks', JSON.stringify('tasks'));
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 // Clear Tasks

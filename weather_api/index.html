@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Weather API</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center bg-warning mx-auto p-3 mt-5 rounded">
+        <h1 id="loaction"></h1>
+        <h3 class="text-dark" id="description"></h3>
+        <h3 id="tempature"></h3>
+        <img src="#" id="icon">
+        <ul id="details" class="list-group mt-3">
+          <li class="list-group-item" id="humidity"></li>
+          <li class="list-group-item" id="dewpoint"></li>
+          <li class="list-group-item" id="feels-like"></li>
+          <li class="list-group-item" id="wind"></li>
+        </ul>
+        <hr>
+        <!-- Button Trigger Modal -->
+        <button type="button" class="btn btn-primary rounded" data-toggle="modal" data-target="#locationModal">
+          Change Location
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="locationModalLabel">Choose Loaction</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="form">
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" class="form-control">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="change-btn" type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="storage.js"></script>
+  <script src="weather.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@ class UI {
     this.postButton = document.querySelector('.post-submit');
     this.forState = 'add';
   }
+  // Show Posts
   showPosts(posts) {
     let output = '';
     posts.forEach((post) => {
@@ -27,6 +28,7 @@ class UI {
     });
     this.post.innerHTML = output;
   }
+  // show alert message
   showAlert(message, className){
     this.clearAlert();
     // create div
@@ -44,15 +46,22 @@ class UI {
       this.clearAlert();
     }, 3000);
   }
+  // Clear Alert Message
   clearAlert(){
     const currentAlert = document.querySelector('.alert');
     if(currentAlert){
       currentAlert.remove();
     }
   }
+  // Clear All Fields
   clearFields(){
     this.titleInput.value = '';
     this.bodyInput.value = '';
+  }
+  fillForm(data){
+    this.titleInput.value = data.title;
+    this.bodyInput.value = data.body;
+    this.idInput.value = data.id;
   }
 }
 
